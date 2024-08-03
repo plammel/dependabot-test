@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.1.0](https://github.com/plammel/dependabot-test/compare/v1.0.0...v1.1.0) (2024-08-03)
+
+
+### Features
+
+* add automerge ([9b54fca](https://github.com/plammel/dependabot-test/commit/9b54fca85c3921e70f2de4b4b64bcb2f549e6f79))
+* add automerge label ([1291fef](https://github.com/plammel/dependabot-test/commit/1291fefdc1ea31c2332ab94b3d44b230a530bc0e))
+* delete labels ([1edd0d1](https://github.com/plammel/dependabot-test/commit/1edd0d1d429441d4c1599dd9899cc60f72245f4a))
+
 ## 1.0.0 (2024-08-03)
 
 
