@@ -1,6 +1,10 @@
 name: Hello World Workflow
+on: push
 
-on: [push]
+permissions:
+  pull-requests: write
+  issues: write
+  repository-projects: write
 
 jobs:
   say-hello:
