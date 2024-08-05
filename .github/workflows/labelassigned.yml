@@ -1,0 +1,17 @@
+name: Run Workflow on Label
+
+on:
+  pull_request:
+    types:
+      - labeled
+ 
+jobs:
+  run-on-label:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run a script
+        run: echo "Label ${{ github.event.label.name }} assigned to PR. Running workflow..."
