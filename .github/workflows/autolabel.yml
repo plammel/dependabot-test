@@ -1,10 +1,5 @@
 name: Dependabot auto-label
-on: pull_request
-
-permissions:
-  pull-requests: write
-  issues: write
-  repository-projects: write
+on: push
 
 jobs:
   dependabot:
