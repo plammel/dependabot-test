@@ -1,22 +1,16 @@
-name: Dependabot auto-label
-on: pull_request
+# name: Dependabot auto-label
+# on: pull_request
 
-permissions:
-  pull-requests: write
-  issues: write
-  repository-projects: write
+# permissions:
+#   pull-requests: write
+#   issues: write
+#   repository-projects: write
 
-jobs:
-  dependabot:
-    runs-on: ubuntu-latest
-    if: github.actor == 'dependabot[bot]'
-    steps:
-      - name: Dependabot metadata
-        id: metadata
-        uses: dependabot/fetch-metadata@v2
-        with:
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
-      - name: Add a automerge label
-        run: gh pr edit "$PR_URL" --add-label "automerge"
-        env:
-          PR_URL: ${{github.event.pull_request.html_url}}
+# jobs:
+#   dependabot:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Add a automerge label
+#         run: gh pr edit "$PR_URL" --add-label "automerge"
+#         env:
+#           PR_URL: ${{github.event.pull_request.html_url}}
