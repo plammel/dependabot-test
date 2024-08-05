@@ -4,11 +4,13 @@ on:
   push:
     branches:
       - main
+      - release-please--branches--main--components--dependabot-test
   pull_request:
     branches:
       - main
+      - release-please--branches--main--components--dependabot-test
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '* * * * *'
 
 jobs:
   build:
