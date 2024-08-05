@@ -1,4 +1,4 @@
-name: changelog
+name: changelog action
 
 on:
   push:
@@ -13,5 +13,4 @@ jobs:
         with:
           release-type: node
           package-name: dependabot-test
-          changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Bug Fixes","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":false}]'
           labels: 'automerge'
