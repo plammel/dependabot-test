@@ -1,0 +1,21 @@
+name: changelog
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  changelog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generating changelog and updating version
+        uses: google-github-actions/release-please-action@v3
+        id: release
+        with:
+          release-type: node
+          package-name: dependabot-test
+          token: ${{ secrets.GIT_PACKAGES_ACCESS_TOKEN }}
+          path: src/lib
+          changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Bug Fixes","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":false}]'
+          labels: 'automerge'

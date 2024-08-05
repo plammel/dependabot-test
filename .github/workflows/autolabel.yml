@@ -1,5 +1,5 @@
 name: Dependabot auto-label
-on: pull_request
+on: push
 
 permissions:
   pull-requests: write
@@ -10,11 +10,6 @@ jobs:
   dependabot:
     runs-on: ubuntu-latest
     steps:
-      - name: Dependabot metadata
-        id: metadata
-        uses: dependabot/fetch-metadata@v2
-        with:
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
       - name: Add a automerge label
         run: gh pr edit "$PR_URL" --add-label "automerge"
         env:
