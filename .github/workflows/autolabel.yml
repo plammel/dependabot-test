@@ -2,16 +2,27 @@ name: Dependabot auto-label
 on: push
 
 jobs:
-  dependabot:
+  say-hello:
     runs-on: ubuntu-latest
-    if: github.actor == 'dependabot[bot]'
+
     steps:
-      - name: Dependabot metadata
-        id: metadata
-        uses: dependabot/fetch-metadata@v2
-        with:
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
-      - name: Add a automerge label
-        run: gh pr edit "$PR_URL" --add-label "automerge"
-        env:
-          PR_URL: ${{github.event.pull_request.html_url}}
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Print Hello World
+      run: echo "Hello, World!"
+
+# jobs:
+#   dependabot:
+#     runs-on: ubuntu-latest
+#     if: github.actor == 'dependabot[bot]'
+#     steps:
+#       - name: Dependabot metadata
+#         id: metadata
+#         uses: dependabot/fetch-metadata@v2
+#         with:
+#           github-token: "${{ secrets.GITHUB_TOKEN }}"
+#       - name: Add a automerge label
+#         run: gh pr edit "$PR_URL" --add-label "automerge"
+#         env:
+#           PR_URL: ${{github.event.pull_request.html_url}}
