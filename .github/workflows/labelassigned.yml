@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Run a script
         run: echo "Label ${{ github.event.label.name }} assigned to PR. Running workflow... :)"
